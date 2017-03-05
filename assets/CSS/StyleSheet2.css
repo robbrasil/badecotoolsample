@@ -1,0 +1,209 @@
+﻿html {
+    width: 100%;
+}
+body {
+    background-color: #e0e1e2 !important;
+    overflow-x: hidden;
+}
+h4 {
+    color: #777777;
+}
+thead {
+    font-weight: bold;
+    color: #777777;
+}
+.navbar-nav a {
+ line-height: 50px;
+}
+.btnsDiv {
+    margin: 8px;
+    margin-right: 50px !important;
+}
+.navbar-header{
+    margin-left: 20px !important;
+}
+.custom-search-form {
+    margin: 0px 10px 5px 60px;
+    width: 300px;
+}
+#badecoToolAdmin {
+    color: #777777;
+    font-size: 17px;
+    margin: 8px;
+    font-weight: bold;
+}
+.logo {
+    margin: 8px;
+    margin-top: 10px;
+}
+.xBtn, .iBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    padding: 0 0 0 0;
+}
+input {
+    width: auto;
+}
+.popover{
+    max-width: 100%;
+}
+.popover-content {
+    margin-right: -75px;
+    padding: 8px 8px 2px 6px;
+}
+.commentFormGroup {
+    margin-bottom: 5px;
+}
+#submitBtn {
+    margin-top: 10px;
+}
+#dataTables-example-div {
+    padding-left: 3em !important;
+    padding-right: 3em !important;
+}
+.table-responsive {
+    width: 100%;
+    overflow:hidden;
+}
+a {
+    color: #303030;
+}
+.panel-body {
+    padding: 15px 50px 15px 50px;
+}
+.commentBtn {
+    margin-left: 8px;
+}
+.col-lg-12 {
+    width: 100%;
+}
+@media only screen and (min-width: 170px) and (max-width: 400px){
+   body {
+       background-color: red !important;
+   }
+     .logo {
+        height: 20%;
+        width: 20%;
+        margin: 2px;
+    }
+    #badecoToolAdmin {
+        font-size: 13px;
+    }
+    /*input::-webkit-input-placeholder {
+    font-size: 12px;
+}*/
+    input{
+        margin: 10px;
+    }
+    #dataTables-example-div {
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+    }
+    .navbar-right {
+        height: 65px !important;
+    }
+   .custom-search-form {
+       margin: 8px;
+       margin-left: 35px;
+       width: 80%;
+       float: left;     
+}
+    .input-group .form-control {
+    margin: 0px !important;
+}
+    .form-group {
+        margin-bottom: 0px !important;
+        width: 98%;
+        margin-left: 5px;
+    }
+   #tgBtn {
+       padding: 5px;
+   } #btnSignout {
+        padding: 5px;
+   }
+     .btnsDiv {
+         margin-right: 35px!important; 
+     }
+    .xBtn, .iBtn {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+    padding: 0 0 0 0;
+    margin:0 
+}
+    #jobSize, #date {
+        position: relative;
+        left: 10px;
+    }
+    .input-group-addon {
+    min-width:50px;
+    text-align:center;
+        position: relative;
+        left: 10px;
+} 
+      table th:nth-child(2), td:nth-child(2),th:nth-child(5), td:nth-child(5),th:nth-child(7), td:nth-child(7) {
+  display: none;
+}
+      td {
+          font-size: 12px;
+      }
+        .popover{
+    max-width: 60%;
+}
+.popover-content {
+    margin-right: -75px;
+    padding: 8px 2px 1px 6px;
+}
+textarea {
+    width: 71%;
+}
+       /*.btn-responsive {
+        padding: 2px 4px;
+        font-size: 90%;
+        line-height: 1;
+        border-radius: 3px;
+    }*/
+}
+@media only screen and (min-width: 401px) and (max-width: 865px) {
+    body {
+        background-color: blue !important;
+    }
+    .popover{
+    max-width: 50%;
+}
+.popover-content {
+    margin-right: -75px;
+    padding: 8px 4px 1px 6px;
+}
+textarea {
+    width: 78%;
+}
+.table-responsive {
+    width: 107%;
+    overflow: hidden;
+}
+    .custom-search-form {
+        margin: 8px;
+        margin-left: 35px;
+        width: 50%;
+        float: left;
+    }
+
+    .logo {
+        height: 20%;
+        width: 20%;
+        margin: 2px;
+    }
+    .xBtn, .iBtn {
+    width: 30px;
+    height: 32px;
+    font-size: 17px;
+    padding: 0 0 0 0;
+    margin:0 
+}
+    input{
+        /*margin: 10px;*/
+    } 
+   
+}

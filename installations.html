@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Private tool">
+    <meta name="Author" content="Robson Barbosa">
+
+    <title>Badeco Tool v2.0</title>
+
+    
+    <link href="assets/CSS/bootstrap.css" rel="stylesheet">
+   
+    <!-- Custom CSS -->
+    <link href="assets/CSS/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="assets/CSS/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- MetisMenu CSS -->
+    <link href="assets/CSS/metisMenu.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="assets/CSS/datatables.min.css" />-->
+    <!-- DataTables JavaScript -->
+  
+    <link rel="stylesheet" href="assets/CSS/bootstrap-datepicker3.css" />
+
+    <link href="assets/CSS/bootstrap-editable.css" rel="stylesheet" />
+    
+    <!--<link href="assets/CSS/style.css" rel="stylesheet"/>-->
+
+    <link href="assets/CSS/StyleSheet3.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css" rel=" stylesheet" />
+
+
+</head>
+<body>
+    <nav class="navbar navbar mainNav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="assets/img/2017-01-13-PHOTO-00000816.jpg" height="45px" width="190px"  alt="WL" class="logo" />
+                <img src="assets/img/2017-01-13-PHOTO-00000817.jpg" height="45px" width="220px" alt="KW" class="logo" />
+            </div>
+            <ul class="nav navbar-nav">
+                <li><h4 class="text-center" id="badecoToolAdmin">Badeco Tool Admin v2.0</h4></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="myInput" onkeyup=" searchJobNumber() " placeholder="Search Job Number" title="Type in the job number">
+                </div>
+                <button type="button" id="tgBtn" class="btn btn-sm btn-success" onclick=" toggleInfo() ">Show Entry Form</button>
+                <button type="button" class="btn btn-sm btn-danger" id="btnSignout">Sign Out</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="col-lg-12" id="panelBody" style="display: none">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="text-center">Add New Entry</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline">
+                        <div class="row" id="formRow">
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                    <form data-toggle="validator" role="form" id="mainForm">
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <input type="text" id="jobNumber" class="form-control" placeholder="Job Number" name="jobNumber" data-minlength="1" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" id="community" class="form-control" placeholder="Community" name="community" data-minlength="1" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" id="lotNumber" class="form-control" placeholder="Lot Number" name="lotNumber" data-minlength="1" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <input class="form-control jobSizeField" id="jobSize" name="jobSize" type="text" placeholder="Job Size" type="number" data-minlength="1" required>
+                                    <div class="input-group-addon squareFeet">
+                                        in ft&sup2;
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" id="originalInstaller" class="form-control" placeholder="Installer" name="installer" data-minlength="1" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-group" id="dateField">
+                                    <input class="form-control dateField" id="date" placeholder="Date" type="text" name="date" data-minlength="1" readonly required>
+                                    <div class="input-group-addon ">
+                                        <i class="fa fa-calendar "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row commentFormGroup">
+                            <div class="col-lg-11">
+                                <input type="text" id="comment" class="form-control" placeholder="More information">
+                            </div>
+                            <div class="col-sm-1 pull-right">
+                                <button class="btn btn-success pull-right" id="submitBtn" name="button" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+
+                <h4 class="text-center">Completed Installations</h4>
+            </div>
+            
+                <div class="panel-body">
+                    <div class=" table-responsive">
+                        <table class="table table-striped table-bordered table-hover display" id="tableMain" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <td id="delHead">Del&nbsp;/&nbsp;Info</td>
+                                    <td>Job Number</td>
+                                    <td>Community</td>
+                                    <td>Lot Number</td>
+                                    <td>Job Size</td>
+                                    <td>Original Installer</td>
+                                    <td>Date</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    <!-- container -->
+    <footer>
+        <div class="footer-copyright">
+            <div class="container-fluid text-center">      
+                <p style="color: #777777">© 2017 Copyright: Robson Barbosa </p>
+
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Warning</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete information? This cannot be undone.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="deleteFinal" onclick=" deleteRow(this.id) " type="button" class="btn btn-success btn-lg" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <script src="assets/JS/jquery-3.1.1.min.js"></script>
+    <script src="assets/JS/firebase.js"></script>
+    <script src="assets/JS/bootstrap.min.js"></script>
+     <script src="assets/JS/firebaseInit.js "></script>
+    <script src="assets/JS/jquery.dataTables.min.js "></script>
+    <script src="assets/JS/dataTables.bootstrap.min.js "></script>
+    <script src="assets/JS/dataTables.responsive.js "></script>
+    <script type="text/javascript" src="assets/JS/bootstrap-datepicker.min.js"></script>
+<script src="assets/JS/bootstrap-editable.min.js"></script>
+
+    <script src="assets/JS/logOut.js "></script>
+    <!--<script src="assets/JS/output.js "></script>-->
+    <script src="assets/JS/bootstrap.min.js "></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="assets/JS/metisMenu.min.js "></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/JS/sb-admin-2.min.js "></script>
+    <script src="assets/JS/installations.js"></script>
+<script src="assets/JS/form.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+    
+</body>
+</html>

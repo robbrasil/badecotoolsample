@@ -1,0 +1,181 @@
+body {
+    background-color: #e0e1e2 !important;
+}
+td:first-of-type {
+    width:95px;
+    background: #f5f5f5;
+}
+td:nth-child(2){
+    width:30px;
+}
+td:nth-child(3){
+    width:200px;
+   
+}
+td:nth-child(4){
+    width:200px;
+     
+}
+td:nth-child(5){
+    width:120px;
+}
+td:nth-child(7){
+    width:140px;
+}
+h4 {
+    color: #777777;
+}
+thead {
+    font-weight: bold;
+    color: #777777;
+}
+#panelBody {
+        margin: 0px 0px 0px -15px !important;
+    padding: 0px 0px 0px 0px !important;
+    width: 102.7%;
+}
+#formId {
+    padding:0px 0px 0px 15px !important;
+}
+#editAll {
+    position: relative;
+    left: 270px;
+    top: 30px;
+}
+.jobNumberField, .lotNumberField{
+    
+    /*width: 135px !important;*/
+  
+}
+.jobSizeField {
+     width: 130px !important;
+}
+.dateField {
+    width: 160px !important;
+}
+img {
+    margin: 5px 5px 5px 5px;
+}
+#originalInstaller {
+    left: 56px;
+    position: relative;
+}
+#dateField{
+    position: relative;
+    left: 56px;
+}
+#badecoToolAdmin {
+    color: #777777;
+    font-size: 17px;
+    margin-left: 30px;
+}
+#commentsBtn {
+    margin: 10px 16px 0px 0px;  
+}
+.popover {    
+    /*left: 903.5px !important;*/
+     max-width: 100%;
+}
+.editableform .control-group {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.popover-content {
+    margin-right: -75px;
+    padding: 8px 8px 2px 6px;
+}
+.xBtn, .iBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    padding: 0 0 0 0;
+}
+.commentBtn {
+    /*position: relative !important;
+    left: 100px !important;*/
+}
+.btnsDiv {
+    position: relative;
+    right: 200px;
+    top: -32px;
+}
+.custom-search-form {
+    /*top: -32px;*/
+}
+.navbar-default {
+    height: 60px;
+}
+#submitBtn {
+    top: -8px !important;
+    position: relative;
+}
+@media only screen and (max-width: 768px) {
+   
+    #myInput {
+            width: 484px !important;
+            left: -192px;
+    }
+    .navbar-default {
+            height: 118px;
+    }
+    #searchBtn1 {
+            left: -192px;
+    }
+    input {
+        width: 711px !important;
+        padding-right: 10px !important;
+    }
+    .btnsDiv {
+        left: 339px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    #submitBtn {
+        top: 0px !important;
+        left: 656px;
+        position: relative;
+    }
+    .jobSizeField {
+        width: 660px !important;
+    }
+    .dateField {
+         width: 674px !important;
+    }  
+     .squareFeet {
+            left: -3px;
+            position: relative;
+     }
+     input {
+            box-sizing: border-box !important;
+     }
+     #badecoToolAdmin {
+            font-size: 20px;
+     }
+     label input{
+            width: 250px !important;
+     }
+     .form-group {
+            padding-bottom: 20px;
+     }
+    .navbar-form .form-group {
+           margin-bottom: -30px;
+    }
+    .panel {
+        width: 768px;
+    }
+}
+@media only screen and (min-device-width: 1024px) {
+    body {
+        background-color: red;
+    }
+    #badecoToolAdmin {
+        font-size: 12px;
+    }
+}
+@media only screen 
+   and (min-width : 320px) {
+   body {
+       background-color: blue;
+   }
+}
